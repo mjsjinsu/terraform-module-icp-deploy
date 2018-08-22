@@ -23,7 +23,8 @@ ubuntu_install(){
   packages_to_check="\
 python-yaml \
 thin-provisioning-tools \
-lvm2"
+lvm2 \
+nfs-client"
   sudo sysctl -w vm.max_map_count=262144
   packages_to_install=""
 
@@ -50,7 +51,8 @@ libtool-ltdl \
 libcgroup \
 iptables \
 device-mapper-persistent-data \
-lvm2"
+lvm2 \
+nfs-utils"
 
   for package in ${packages_to_check}; do
     if ! rpm -q ${package} &> /dev/null; then
