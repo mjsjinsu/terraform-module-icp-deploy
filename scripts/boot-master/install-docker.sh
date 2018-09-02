@@ -45,7 +45,7 @@ else
     # Figure out what we should name the file
     filename="icp-docker.bin"
     mkdir -p ${sourcedir}
-    curl -o ${sourcedir}/${filename} "${package_location#http:}"
+    curl -o ${sourcedir}/${filename} "${package_location}"
     package_file="${sourcedir}/${filename}"
   fi
 
